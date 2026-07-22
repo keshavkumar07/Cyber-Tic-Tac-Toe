@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Tic-Tac-Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="background-globes">
+    <div class="globe globe-1"></div>
+    <div class="globe globe-2"></div>
+  </div>
+
+  <main class="app-container">
+    <header class="header">
+      <h1 class="title">TIC <span class="highlight-x">TAC</span> <span class="highlight-o">TOE</span></h1>
+      <p class="subtitle">Next-Gen Gameplay • Play Local or vs AI</p>
+    </header>
+
+    <!-- Game Mode Switcher -->
+    <div class="mode-selector">
+      <button class="mode-btn active" id="pvpModeBtn">👥 2 Players</button>
+      <button class="mode-btn" id="aiModeBtn">🤖 vs AI</button>
+    </div>
+
+    <!-- Live Scoreboard -->
+    <div class="scoreboard">
+      <div class="score-card card-x">
+        <span class="player-label" id="playerXName">Player X</span>
+        <span class="score-value" id="scoreX">0</span>
+      </div>
+      <div class="score-card card-ties">
+        <span class="player-label">Ties</span>
+        <span class="score-value" id="scoreTies">0</span>
+      </div>
+      <div class="score-card card-o">
+        <span class="player-label" id="playerOName">Player O</span>
+        <span class="score-value" id="scoreO">0</span>
+      </div>
+    </div>
+
+    <!-- Dynamic Status Banner -->
+    <div class="status-banner" id="statusBanner">
+      Turn: <span id="turnIndicator" class="turn-x">X</span>
+    </div>
+
+    <!-- Interactive Grid Board -->
+    <div class="board-container">
+      <div class="board" id="board">
+        <button class="cell" data-index="0" aria-label="Cell 1"></button>
+        <button class="cell" data-index="1" aria-label="Cell 2"></button>
+        <button class="cell" data-index="2" aria-label="Cell 3"></button>
+        <button class="cell" data-index="3" aria-label="Cell 4"></button>
+        <button class="cell" data-index="4" aria-label="Cell 5"></button>
+        <button class="cell" data-index="5" aria-label="Cell 6"></button>
+        <button class="cell" data-index="6" aria-label="Cell 7"></button>
+        <button class="cell" data-index="7" aria-label="Cell 8"></button>
+        <button class="cell" data-index="8" aria-label="Cell 9"></button>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-primary" id="restartBtn">🔄 Restart Game</button>
+      <button class="btn btn-secondary" id="resetScoreBtn">🗑️ Reset Scores</button>
+    </div>
+  </main>
+
+  <canvas id="confettiCanvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
